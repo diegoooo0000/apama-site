@@ -15,124 +15,121 @@
 
 <header>
 
+<div class="logo">
 <h1>APAMA FUTSAL</h1>
+</div>
 
 <nav>
+
 <a href="#sobre">Clube</a>
 <a href="#jogos">Jogos</a>
-<a href="#titulos">Títulos</a>
 <a href="#elenco">Elenco</a>
+<a href="#titulos">Títulos</a>
+
 </nav>
 
 </header>
 
 
-
 <section class="banner">
 
-<div class="banner-text">
+<div class="banner-content">
 
-<h2>Formando talentos no futsal desde 1994</h2>
+<h2>Formando atletas desde 1994</h2>
 
 <p>Blumenau • Santa Catarina</p>
 
-<button onclick="document.getElementById('jogos').scrollIntoView({behavior:'smooth'})">
-Ver Jogos
-</button>
+<button onclick="scrollJogos()">Ver jogos</button>
 
 </div>
 
 </section>
 
 
-
 <section id="sobre" class="container">
 
-<h2>História da APAMA</h2>
+<h2>Sobre a APAMA</h2>
 
 <p>
 
 A APAMA (Associação Desportiva de Pais e Amigos dos Menores Atletas)
-foi fundada em 1º de novembro de 1994 em Blumenau – SC.
+foi fundada em Blumenau em 1º de novembro de 1994.
 
-O projeto nasceu com o objetivo de desenvolver crianças e jovens
-através do futsal, utilizando o esporte como ferramenta de formação
-educacional, social e esportiva.
+A instituição trabalha com formação esportiva de jovens através
+do futsal, participando de campeonatos estaduais e nacionais
+nas categorias de base.
 
-Ao longo de sua história, a APAMA se consolidou como uma das principais
-escolas de futsal de base de Santa Catarina, participando de
-competições estaduais e nacionais.
+Entre os principais resultados está o título da Taça Brasil
+de Futsal Sub-14 conquistado de forma invicta em 2022.
 
-Entre suas principais conquistas estão cinco títulos do Campeonato
-Catarinense e títulos nacionais importantes como a Taça Brasil
-Sub-14 (2022) e a Taça Brasil Sub-15 (2023).
-
-Hoje a APAMA trabalha com categorias desde o Sub-7 até o Sub-17,
-formando novos talentos e promovendo o esporte em Blumenau.
+O clube mantém equipes desde as categorias iniciais
+até o Sub-17 e é uma das principais escolas de futsal
+de base de Santa Catarina.
 
 </p>
 
 </section>
 
 
-
 <section class="container">
 
-<h2>Selecionar Categoria</h2>
+<h2>Categorias</h2>
 
 <div class="categorias">
 
-<button onclick="mudarCategoria('sub7')">Sub 7</button>
-<button onclick="mudarCategoria('sub9')">Sub 9</button>
-<button onclick="mudarCategoria('sub11')">Sub 11</button>
-<button onclick="mudarCategoria('sub13')">Sub 13</button>
-<button onclick="mudarCategoria('sub15')">Sub 15</button>
-<button onclick="mudarCategoria('sub17')">Sub 17</button>
+<button onclick="mudarCategoria('sub9')">Sub-9</button>
+<button onclick="mudarCategoria('sub11')">Sub-11</button>
+<button onclick="mudarCategoria('sub13')">Sub-13</button>
+<button onclick="mudarCategoria('sub15')">Sub-15</button>
+<button onclick="mudarCategoria('sub17')">Sub-17</button>
 
 </div>
 
 </section>
 
 
-
 <section id="jogos" class="container">
 
-<h2 id="tituloCategoria">Informações da Categoria</h2>
+<h2 id="tituloCategoria">Jogos da categoria</h2>
 
-<div id="jogosContainer"></div>
-
-</section>
-
-
-
-<section id="titulos" class="container">
-
-<h2>Títulos da APAMA</h2>
-
-<ul>
-
-<li>🏆 Taça Brasil Sub-14 — 2022</li>
-<li>🏆 Taça Brasil Sub-15 — 2023</li>
-<li>🏆 Campeonato Catarinense — 1998</li>
-<li>🏆 Campeonato Catarinense — 2007</li>
-<li>🏆 Campeonato Catarinense — 2008</li>
-<li>🏆 Campeonato Catarinense — 2009</li>
-<li>🏆 Campeonato Catarinense — 2010</li>
-
-</ul>
+<div id="listaJogos" class="jogos-grid"></div>
 
 </section>
-
 
 
 <section id="elenco" class="container">
 
 <h2>Elenco</h2>
 
-<div id="jogadores"></div>
+<div id="listaJogadores" class="players-grid"></div>
 
 </section>
 
+
+<section id="titulos" class="container">
+
+<h2>Títulos importantes</h2>
+
+<div class="titulos-grid">
+
+<div class="titulo-card">
+<h3>Taça Brasil Sub-14</h3>
+<p>Campeão 2022</p>
+</div>
+
+<div class="titulo-card">
+<h3>Taça Brasil Sub-15</h3>
+<p>Campeão 2023</p>
+</div>
+
+<div class="titulo-card">
+<h3>Campeonato Catarinense</h3>
+<p>Vários títulos nas categorias de base</p>
+</div>
+
+</div>
+
+</section>
 
 
 <footer>
@@ -144,8 +141,4 @@ formando novos talentos e promovendo o esporte em Blumenau.
 <script src="script.js"></script>
 
 </body>
-</html>
-
-</body>
-
 </html>
