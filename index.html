@@ -1,168 +1,168 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
+
 <meta charset="UTF-8">
-<title>APAMA Futsal | Blumenau</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>APAMA Futsal</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-<h1>APAMA FUTSAL</h1>
+<h1 class="logo">APAMA FUTSAL</h1>
 
 <nav>
-<a href="#sobre">Clube</a>
+
+<a href="#historia">História</a>
 <a href="#categorias">Categorias</a>
 <a href="#jogos">Jogos</a>
-<a href="#elenco">Elenco</a>
 <a href="#titulos">Títulos</a>
+<a href="#elenco">Elenco</a>
+
 </nav>
 
 </header>
 
 
-<section class="banner">
+<section class="hero">
 
-<div class="banner-content">
+<div class="hero-text">
 
-<h2>APAMA FUTSAL BLUMENAU</h2>
-<p>Formação de atletas desde 1994</p>
+<h2>APAMA FUTSAL</h2>
+
+<p>Formando atletas em Blumenau do Sub 7 ao Sub 17</p>
 
 </div>
 
 </section>
 
 
-<section id="sobre" class="container">
+<section id="historia" class="section">
 
-<h2>Sobre a APAMA</h2>
+<h2>História da APAMA</h2>
 
 <p>
 
-A APAMA (Associação Desportiva de Pais e Amigos dos Menores Atletas)
-foi fundada em Blumenau no dia 1º de novembro de 1994.
-
-A instituição é uma das principais escolas de futsal de base
-de Santa Catarina, participando de competições estaduais e nacionais.
-
-Entre seus maiores títulos estão a Taça Brasil de Futsal
-Sub-14 (2022) e Sub-15 (2023).
-
-O clube trabalha com formação esportiva e educacional
-de jovens atletas através do futsal.
+A APAMA é um projeto esportivo dedicado ao desenvolvimento de
+jovens atletas no futsal em Blumenau. A associação participa
+de competições regionais e estaduais, formando atletas e cidadãos.
 
 </p>
 
 </section>
 
 
-<section id="categorias" class="container">
+<section id="categorias" class="section">
 
-<h2>Categorias da APAMA</h2>
+<h2>Categorias</h2>
 
-<div class="categorias">
+<div class="categoria-botoes">
 
-<div class="categoria">Sub-7</div>
-<div class="categoria">Sub-8</div>
-<div class="categoria">Sub-9</div>
-<div class="categoria">Sub-10</div>
-<div class="categoria">Sub-11</div>
-<div class="categoria">Sub-12</div>
-<div class="categoria">Sub-13</div>
-<div class="categoria">Sub-14</div>
-<div class="categoria">Sub-15</div>
-<div class="categoria">Sub-16</div>
-<div class="categoria">Sub-17</div>
+<button onclick="mostrarCategoria('sub7')">Sub 7</button>
+<button onclick="mostrarCategoria('sub8')">Sub 8</button>
+<button onclick="mostrarCategoria('sub9')">Sub 9</button>
+<button onclick="mostrarCategoria('sub10')">Sub 10</button>
+<button onclick="mostrarCategoria('sub11')">Sub 11</button>
+<button onclick="mostrarCategoria('sub12')">Sub 12</button>
+<button onclick="mostrarCategoria('sub13')">Sub 13</button>
+<button onclick="mostrarCategoria('sub14')">Sub 14</button>
+<button onclick="mostrarCategoria('sub15')">Sub 15</button>
+<button onclick="mostrarCategoria('sub16')">Sub 16</button>
+<button onclick="mostrarCategoria('sub17')">Sub 17</button>
+
+</div>
+
+<div id="categoria-info"></div>
+
+</section>
+
+
+<section id="jogos" class="section">
+
+<h2>Calendário de Jogos</h2>
+
+<table>
+
+<tr>
+<th>Data</th>
+<th>Categoria</th>
+<th>Jogo</th>
+<th>Local</th>
+</tr>
+
+<tr>
+<td>12/04</td>
+<td>Sub 13</td>
+<td>APAMA x Timbó</td>
+<td>Blumenau</td>
+</tr>
+
+<tr>
+<td>18/04</td>
+<td>Sub 15</td>
+<td>APAMA x Jaraguá</td>
+<td>Jaraguá do Sul</td>
+</tr>
+
+</table>
+
+</section>
+
+
+<section id="titulos" class="section">
+
+<h2>Títulos</h2>
+
+<div class="titulos-grid">
+
+<div class="titulo-card">
+<h3>Sub 13</h3>
+<p>Campeão Liga Catarinense</p>
+</div>
+
+<div class="titulo-card">
+<h3>Sub 15</h3>
+<p>Campeão Regional</p>
+</div>
+
+<div class="titulo-card">
+<h3>Sub 17</h3>
+<p>Vice Campeão Estadual</p>
+</div>
 
 </div>
 
 </section>
 
 
-<section id="jogos" class="container">
+<section id="elenco" class="section">
 
-<h2>Competições e Jogos</h2>
+<h2>Elenco Atual</h2>
 
-<div class="jogos">
+<div class="players-grid">
 
-<div class="jogo-card">
-<p>Campeonato Catarinense de Base</p>
+<div class="player-card">
+<h3>João Silva</h3>
+<p>Fixo</p>
 </div>
 
-<div class="jogo-card">
-<p>Taça Brasil de Clubes</p>
+<div class="player-card">
+<h3>Pedro Santos</h3>
+<p>Ala</p>
 </div>
 
-<div class="jogo-card">
-<p>Supercopa das Américas</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="elenco" class="container">
-
-<h2>Exemplo de atletas registrados</h2>
-
-<div class="players">
-
-<div class="player">
-<h3>Arthur Muller Senem</h3>
-</div>
-
-<div class="player">
-<h3>Bruno Henrique Raduntz</h3>
-</div>
-
-<div class="player">
-<h3>Davi Eduardo Muller</h3>
-</div>
-
-<div class="player">
-<h3>Felipe Tonioli Schroeder</h3>
-</div>
-
-<div class="player">
-<h3>Gustavo Luiz Nascimento</h3>
-</div>
-
-<div class="player">
-<h3>Pietro Rafael Silva</h3>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="titulos" class="container">
-
-<h2>Títulos da APAMA</h2>
-
-<div class="titulos">
-
-<div class="titulo">
-<h3>Taça Brasil Sub-14</h3>
-<p>Campeão 2022</p>
-</div>
-
-<div class="titulo">
-<h3>Taça Brasil Sub-15</h3>
-<p>Campeão 2023</p>
-</div>
-
-<div class="titulo">
-<h3>Supercopa das Américas</h3>
-<p>Títulos nas categorias Sub-14 e Sub-17</p>
+<div class="player-card">
+<h3>Lucas Oliveira</h3>
+<p>Goleiro</p>
 </div>
 
 </div>
@@ -172,11 +172,14 @@ de jovens atletas através do futsal.
 
 <footer>
 
-<p>APAMA Futsal • Blumenau SC</p>
+<p>© APAMA Futsal - Blumenau</p>
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
 </body>
 </html>
