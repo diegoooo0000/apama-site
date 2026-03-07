@@ -8,27 +8,24 @@
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo">
 <h1>APAMA FUTSAL</h1>
-</div>
 
 <nav>
-
 <a href="#sobre">Clube</a>
-<a href="#resultados">Resultados</a>
 <a href="#jogos">Jogos</a>
 <a href="#titulos">Títulos</a>
 <a href="#elenco">Elenco</a>
-
 </nav>
 
 </header>
+
 
 
 <section class="banner">
@@ -39,107 +36,78 @@
 
 <p>Blumenau • Santa Catarina</p>
 
-<button onclick="scrollToSection()">Ver jogos</button>
+<button onclick="document.getElementById('jogos').scrollIntoView({behavior:'smooth'})">
+Ver Jogos
+</button>
 
 </div>
 
 </section>
 
 
+
 <section id="sobre" class="container">
 
-<h2>Sobre a APAMA</h2>
+<h2>História da APAMA</h2>
 
 <p>
 
-A APAMA Futsal é uma das principais escolas de futsal de base de Blumenau,
-trabalhando na formação de atletas desde as categorias sub-7 até sub-17.
+A APAMA (Associação Desportiva de Pais e Amigos dos Menores Atletas)
+foi fundada em 1º de novembro de 1994 em Blumenau – SC.
 
-O projeto utiliza o esporte como ferramenta de desenvolvimento social
-e formação de cidadãos.
+O projeto nasceu com o objetivo de desenvolver crianças e jovens
+através do futsal, utilizando o esporte como ferramenta de formação
+educacional, social e esportiva.
+
+Ao longo de sua história, a APAMA se consolidou como uma das principais
+escolas de futsal de base de Santa Catarina, participando de
+competições estaduais e nacionais.
+
+Entre suas principais conquistas estão cinco títulos do Campeonato
+Catarinense e títulos nacionais importantes como a Taça Brasil
+Sub-14 (2022) e a Taça Brasil Sub-15 (2023).
+
+Hoje a APAMA trabalha com categorias desde o Sub-7 até o Sub-17,
+formando novos talentos e promovendo o esporte em Blumenau.
 
 </p>
 
 </section>
 
 
-<section id="resultados" class="container">
 
-<h2>Últimos Resultados</h2>
+<section class="container">
 
-<table>
+<h2>Selecionar Categoria</h2>
 
-<tr>
-<th>Data</th>
-<th>Jogo</th>
-<th>Placar</th>
-<th>Categoria</th>
-</tr>
+<div class="categorias">
 
-<tr>
-<td>10/05</td>
-<td>APAMA x Jaraguá</td>
-<td>4 - 2</td>
-<td>Sub-17</td>
-</tr>
+<button onclick="mudarCategoria('sub7')">Sub 7</button>
+<button onclick="mudarCategoria('sub9')">Sub 9</button>
+<button onclick="mudarCategoria('sub11')">Sub 11</button>
+<button onclick="mudarCategoria('sub13')">Sub 13</button>
+<button onclick="mudarCategoria('sub15')">Sub 15</button>
+<button onclick="mudarCategoria('sub17')">Sub 17</button>
 
-<tr>
-<td>05/05</td>
-<td>APAMA x Joinville</td>
-<td>2 - 1</td>
-<td>Sub-15</td>
-</tr>
-
-<tr>
-<td>28/04</td>
-<td>APAMA x Criciúma</td>
-<td>3 - 3</td>
-<td>Sub-13</td>
-</tr>
-
-</table>
+</div>
 
 </section>
+
 
 
 <section id="jogos" class="container">
 
-<h2>Próximos Jogos</h2>
+<h2 id="tituloCategoria">Informações da Categoria</h2>
 
-<div class="games">
-
-<div class="game-card">
-
-<h3>APAMA x Chapecó</h3>
-
-<p>Categoria: Sub-17</p>
-
-<p>Data: 25/05</p>
-
-<p>Local: CSU Garcia</p>
-
-</div>
-
-<div class="game-card">
-
-<h3>APAMA x Joinville</h3>
-
-<p>Categoria: Sub-15</p>
-
-<p>Data: 02/06</p>
-
-<p>Local: Blumenau</p>
-
-</div>
-
-</div>
+<div id="jogosContainer"></div>
 
 </section>
 
 
+
 <section id="titulos" class="container">
 
-<h2>Títulos</h2>
+<h2>Títulos da APAMA</h2>
 
 <ul>
 
@@ -156,56 +124,27 @@ e formação de cidadãos.
 </section>
 
 
+
 <section id="elenco" class="container">
 
 <h2>Elenco</h2>
 
-<div class="players">
-
-<div class="player">
-
-<h3>João Silva</h3>
-
-<p>Posição: Goleiro</p>
-
-</div>
-
-<div class="player">
-
-<h3>Pedro Santos</h3>
-
-<p>Posição: Ala</p>
-
-</div>
-
-<div class="player">
-
-<h3>Lucas Pereira</h3>
-
-<p>Posição: Fixo</p>
-
-</div>
-
-<div class="player">
-
-<h3>Gabriel Costa</h3>
-
-<p>Posição: Pivô</p>
-
-</div>
-
-</div>
+<div id="jogadores"></div>
 
 </section>
 
 
+
 <footer>
 
-<p>© APAMA Futsal - Blumenau</p>
+<p>© APAMA Futsal — Blumenau SC</p>
 
 </footer>
 
 <script src="script.js"></script>
+
+</body>
+</html>
 
 </body>
 
