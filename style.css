@@ -12,10 +12,12 @@ header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
 
 background:#0c7a33;
+
 color:white;
+
+padding:20px;
 
 }
 
@@ -25,7 +27,7 @@ nav a{
 color:white;
 margin-left:20px;
 text-decoration:none;
-font-weight:600;
+font-weight:bold;
 
 }
 
@@ -39,7 +41,7 @@ rgba(0,0,0,0.5),
 rgba(0,0,0,0.5)
 ),
 
-url("https://images.unsplash.com/photo-1517649763962-0c623066013b");
+url("https://images.unsplash.com/photo-1574629810360-7efbbe195018");
 
 background-size:cover;
 background-position:center;
@@ -48,8 +50,9 @@ display:flex;
 align-items:center;
 justify-content:center;
 
-color:white;
 text-align:center;
+
+color:white;
 
 }
 
@@ -63,11 +66,9 @@ font-size:40px;
 
 .banner button{
 
-margin-top:20px;
 padding:12px 25px;
-border:none;
-
 background:#d62828;
+border:none;
 color:white;
 font-size:16px;
 cursor:pointer;
@@ -84,41 +85,26 @@ padding:50px 20px;
 }
 
 
-h2{
+.categorias button{
 
-color:#0c7a33;
+background:#0c7a33;
+color:white;
+border:none;
+
+padding:10px 18px;
+margin:5px;
+
+font-weight:bold;
+cursor:pointer;
+
+border-radius:6px;
 
 }
 
 
-table{
-
-width:100%;
-border-collapse:collapse;
-
-}
-
-
-th{
+.categorias button:hover{
 
 background:#d62828;
-color:white;
-
-}
-
-
-th,td{
-
-padding:10px;
-border:1px solid #ddd;
-
-}
-
-
-.games{
-
-display:flex;
-gap:20px;
 
 }
 
@@ -126,19 +112,12 @@ gap:20px;
 .game-card{
 
 background:white;
+
 padding:20px;
+
+margin:15px 0;
+
 border-left:5px solid #0c7a33;
-
-}
-
-
-.players{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-
-gap:20px;
 
 }
 
@@ -148,6 +127,12 @@ gap:20px;
 background:white;
 
 padding:20px;
+
+margin:10px;
+
+display:inline-block;
+
+width:200px;
 
 border-top:4px solid #d62828;
 
