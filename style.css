@@ -1,188 +1,89 @@
-body{
+/* ============================
+   PATROCINADORES — STYLE SYSTEM
+   ============================ */
+.section-patrocinadores { background: var(--dark); padding: 80px 0; }
 
-margin:0;
-font-family:Poppins;
-background:#f4f4f4;
+.patrocinio-tier { margin-bottom: 48px; }
+.patrocinio-tier-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding-bottom: 8px;
+}
+.patrocinio-tier-label.ouro  { color: #f0c040; border-color: rgba(240,192,64,0.25); }
+.patrocinio-tier-label.prata { color: #c0c0c0; border-color: rgba(192,192,192,0.2); }
+.patrocinio-tier-label.bronze{ color: #cd7f32; border-color: rgba(205,127,50,0.2); }
+.patrocinio-tier-label.apoio { color: #888; border-color: rgba(255,255,255,0.1); }
 
+.patrocinio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.patrocinio-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  min-width: 160px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.patrocinio-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+.patrocinio-card img {
+  max-height: 60px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(1.8);
+  transition: filter 0.2s;
+}
+.patrocinio-card:hover img { filter: none; }
+.patrocinio-card span {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.05em;
+  text-align: center;
 }
 
-.header{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:20px 40px;
-
-background:#0a6a2b;
-color:white;
-
-position:sticky;
-top:0;
-
+/* Admin patrocinadores */
+.patr-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.patr-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 10px 14px;
 }
-
-nav a{
-
-color:white;
-margin-left:25px;
-text-decoration:none;
-font-weight:600;
-transition:0.3s;
-
+.patr-item img { width: 48px; height: 36px; object-fit: contain; filter: brightness(1.2); background: #222; border-radius: 3px; }
+.patr-item-name { flex: 1; font-size: 0.9rem; color: rgba(255,255,255,0.8); line-height: 1.2; }
+.patr-item-tier {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 3px;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.4);
+  min-width: 70px;
+  text-align: center;
 }
-
-nav a:hover{
-
-color:#ff4d4d;
-
-}
-
-.hero{
-
-height:550px;
-
-background:url("https://images.unsplash.com/photo-1574629810360-7efbbe195018")
-
-center/cover;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-}
-
-.hero-text{
-
-background:rgba(0,0,0,0.6);
-color:white;
-
-padding:50px;
-
-text-align:center;
-
-}
-
-.section{
-
-max-width:1300px;
-margin:auto;
-padding:80px 20px;
-
-}
-
-.categoria-botoes{
-
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-
-}
-
-.categoria-botoes button{
-
-padding:12px 20px;
-border:none;
-
-background:#c40000;
-color:white;
-
-cursor:pointer;
-
-font-weight:bold;
-
-transition:0.3s;
-
-}
-
-.categoria-botoes button:hover{
-
-transform:scale(1.05);
-
-}
-
-table{
-
-width:100%;
-border-collapse:collapse;
-
-background:white;
-
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-
-}
-
-th,td{
-
-padding:15px;
-
-border-bottom:1px solid #ddd;
-
-text-align:center;
-
-}
-
-.titulos-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:20px;
-
-}
-
-.titulo-card{
-
-background:white;
-padding:30px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-
-transition:0.3s;
-
-}
-
-.titulo-card:hover{
-
-transform:translateY(-5px);
-
-}
-
-.players-grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-}
-
-.player-card{
-
-background:white;
-padding:25px;
-
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-
-transition:0.3s;
-
-}
-
-.player-card:hover{
-
-transform:scale(1.05);
-
-}
-
-footer{
-
-background:#111;
-color:white;
-
-text-align:center;
-
-padding:30px;
-
-}
+.patr-item-tier.ouro   { background: rgba(240,192,64,0.15);  color: #f0c040; }
+.patr-item-tier.prata  { background: rgba(192,192,192,0.1);  color: #c0c0c0; }
+.patr-item-tier.bronze { background: rgba(205,127,50,0.1);   color: #cd7f32; }
