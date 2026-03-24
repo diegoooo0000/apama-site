@@ -1,185 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>APAMA Futsal</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<h1 class="logo">APAMA FUTSAL</h1>
-
-<nav>
-
-<a href="#historia">História</a>
-<a href="#categorias">Categorias</a>
-<a href="#jogos">Jogos</a>
-<a href="#titulos">Títulos</a>
-<a href="#elenco">Elenco</a>
-
-</nav>
-
-</header>
-
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h2>APAMA FUTSAL</h2>
-
-<p>Formando atletas em Blumenau do Sub 7 ao Sub 17</p>
-
-</div>
-
+<section id="patrocinadores" class="section section-patrocinadores">
+  <div class="container">
+    <div class="section-label light">Apoiadores</div>
+    <h2 class="section-title light" style="color:white;">Nossos <strong>Patrocinadores</strong></h2>
+    <div id="patrochadoresContent" style="margin-top:48px;"></div>
+  </div>
 </section>
+<div class="admin-nav-item" data-tab="patrocinadores" onclick="showTab('patrocinadores')">🤝 Patrocinadores</div>
+<div class="adm-tab" data-tab="patrocinadores" style="display:none;">
+  <div class="adm-section-title">🤝 Gerenciar Patrocinadores</div>
 
+  <div style="display:grid; gap:15px; margin-bottom:30px; background:rgba(255,255,255,0.03); padding:20px; border-radius:8px;">
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+      <div>
+        <label class="adm-label">Nome da Empresa *</label>
+        <input id="patrNome" class="adm-input" placeholder="Ex: Empresa ABC" />
+      </div>
+      <div>
+        <label class="adm-label">Categoria (Tier)</label>
+        <select id="patrTier" class="adm-input">
+          <option value="ouro">🥇 Ouro (Master)</option>
+          <option value="prata">🥈 Prata</option>
+          <option value="bronze">🥉 Bronze</option>
+          <option value="apoio">🤝 Apoio</option>
+        </select>
+      </div>
+    </div>
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+      <div>
+        <label class="adm-label">URL do Logo (SVG ou PNG Transparente)</label>
+        <input id="patrLogo" class="adm-input" placeholder="https://link-da-imagem.png" />
+      </div>
+      <div>
+        <label class="adm-label">Site do Patrocinador</label>
+        <input id="patrSite" class="adm-input" placeholder="https://www.site.com.br" />
+      </div>
+    </div>
+    <div>
+      <label class="adm-label">Ano de Vigência</label>
+      <input id="patrAno" class="adm-input" type="number" value="2025" />
+    </div>
+    <button class="adm-btn-green" onclick="addPatrocinador()" style="margin-top:10px;">+ Adicionar ou Salvar Patrocinador</button>
+  </div>
 
-<section id="historia" class="section">
-
-<h2>História da APAMA</h2>
-
-<p>
-
-A APAMA é um projeto esportivo dedicado ao desenvolvimento de
-jovens atletas no futsal em Blumenau. A associação participa
-de competições regionais e estaduais, formando atletas e cidadãos.
-
-</p>
-
-</section>
-
-
-<section id="categorias" class="section">
-
-<h2>Categorias</h2>
-
-<div class="categoria-botoes">
-
-<button onclick="mostrarCategoria('sub7')">Sub 7</button>
-<button onclick="mostrarCategoria('sub8')">Sub 8</button>
-<button onclick="mostrarCategoria('sub9')">Sub 9</button>
-<button onclick="mostrarCategoria('sub10')">Sub 10</button>
-<button onclick="mostrarCategoria('sub11')">Sub 11</button>
-<button onclick="mostrarCategoria('sub12')">Sub 12</button>
-<button onclick="mostrarCategoria('sub13')">Sub 13</button>
-<button onclick="mostrarCategoria('sub14')">Sub 14</button>
-<button onclick="mostrarCategoria('sub15')">Sub 15</button>
-<button onclick="mostrarCategoria('sub16')">Sub 16</button>
-<button onclick="mostrarCategoria('sub17')">Sub 17</button>
-
+  <div class="patr-list" id="patrList"></div>
 </div>
-
-<div id="categoria-info"></div>
-
-</section>
-
-
-<section id="jogos" class="section">
-
-<h2>Calendário de Jogos</h2>
-
-<table>
-
-<tr>
-<th>Data</th>
-<th>Categoria</th>
-<th>Jogo</th>
-<th>Local</th>
-</tr>
-
-<tr>
-<td>12/04</td>
-<td>Sub 13</td>
-<td>APAMA x Timbó</td>
-<td>Blumenau</td>
-</tr>
-
-<tr>
-<td>18/04</td>
-<td>Sub 15</td>
-<td>APAMA x Jaraguá</td>
-<td>Jaraguá do Sul</td>
-</tr>
-
-</table>
-
-</section>
-
-
-<section id="titulos" class="section">
-
-<h2>Títulos</h2>
-
-<div class="titulos-grid">
-
-<div class="titulo-card">
-<h3>Sub 13</h3>
-<p>Campeão Liga Catarinense</p>
-</div>
-
-<div class="titulo-card">
-<h3>Sub 15</h3>
-<p>Campeão Regional</p>
-</div>
-
-<div class="titulo-card">
-<h3>Sub 17</h3>
-<p>Vice Campeão Estadual</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section id="elenco" class="section">
-
-<h2>Elenco Atual</h2>
-
-<div class="players-grid">
-
-<div class="player-card">
-<h3>João Silva</h3>
-<p>Fixo</p>
-</div>
-
-<div class="player-card">
-<h3>Pedro Santos</h3>
-<p>Ala</p>
-</div>
-
-<div class="player-card">
-<h3>Lucas Oliveira</h3>
-<p>Goleiro</p>
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© APAMA Futsal - Blumenau</p>
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
-</body>
-</html>
